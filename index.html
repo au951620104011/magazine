@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#" style="--jsc-dls-current-period: day; --jsc-dls-current-base: #FFFBEC; --jsc-dls-current-contrast: #000000; --jsc-dls-current-primary: #C21F06; --wp--preset--color--base: #FFFBEC; --wp--preset--color--contrast: #000000; --wp--preset--color--primary: #C21F06; --wp--preset--font-family--primary: 'BasisGrotesquePro', sans-serif; --wp--preset--font-family--secondary: SeasonMix, serif;" class="lenis">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>John Britto | JOSHUA's Magazine Spotlight</title>
+    
+    <style>
+        /* Exact Magazine Logic from provided sample */
+        :root {
+            --wp--custom--layout--content: clamp(220px, 90%, 2380px);
+            --wp--custom--spacing--80: clamp(3.6rem, 4.76vw, 4rem);
+        }
+
+        body {
+            background-color: var(--wp--preset--color--base);
+            color: var(--wp--preset--color--contrast);
+            font-family: var(--wp--preset--font-family--primary);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Scrolled Header Effect */
+        header.wp-block-template-part.scrolled {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 251, 236, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .header-logo { font-family: var(--wp--preset--font-family--secondary); font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Hero Parallax with dynamic scale */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            background-image: url('thh.jpeg'); /* Main Group Photo */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            transform: scale(1.1);
+            transition: transform 0.1s linear;
+        }
+
+        .hero-title {
+            position: relative;
+            color: #fff;
+            font-family: var(--wp--preset--font-family--secondary);
+            font-size: clamp(3rem, 10vw, 6rem);
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 0.9;
+        }
+
+        /* Sticky Section Logic */
+        .main-content {
+            max-width: var(--wp--custom--layout--content);
+            margin: 0 auto;
+            padding: var(--wp--custom--spacing--80) 2rem;
+        }
+
+        .sticky-wrapper { position: relative; }
+
+        .wp-block-post.sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--wp--preset--color--base);
+        }
+
+        .sticky-card-inner {
+            width: 90%;
+            height: 80vh;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+        }
+
+        .sticky-card-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8) blur(0px);
+            transition: all 0.8s ease;
+        }
+
+        .sticky-card-inner:hover img { transform: scale(1.05); filter: brightness(0.6) blur(5px); }
+
+        .overlay-meta {
+            position: absolute;
+            bottom: 60px;
+            left: 60px;
+            color: #fff;
+            z-index: 10;
+        }
+
+        .section-label {
+            background: var(--wp--preset--color--primary);
+            padding: 6px 15px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .post-title-magazine {
+            font-family: var(--wp--preset--font-family--secondary);
+            font-size: clamp(2rem, 5vw, 4.5rem);
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* Ticker / Marquee Section */
+        .ticker-wrap {
+            background: #000;
+            color: #fff;
+            padding: 30px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+            font-family: var(--wp--preset--font-family--secondary);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        footer { background: #000; color: #fff; padding: 100px 50px; text-align: center; }
+    </style>
+</head>
+
+<body class="home day-color">
+
+    <header class="wp-block-template-part scrolled">
+        <div class="header-logo">John Britto</div>
+        <div style="font-size: 0.75rem; letter-spacing: 3px; font-weight: bold;">[ MENU ]</div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image-bg" id="heroBg"></div>
+        <div class="hero-title">
+            <span style="font-size: 0.8rem; letter-spacing: 5px; opacity: 0.8;">Service & Inspiration</span><br>
+            Leadership Spotlight
+        </div>
+    </section>
+
+    <main class="main-content">
+        
+        <div class="sticky-wrapper">
+            
+            <article class="wp-block-post sticky">
+                <div class="sticky-card-inner">
+                    <img src="WhatsApp Image 2026-02-24 at 2.00.59.jpeg" alt="Cultural Leadership">
+                    <div class="overlay-meta">
+                        <span class="section-label">LATEST FEATURE</span>
+                        <h2 class="post-title-magazine">The Catalyst for Unity</h2>
+                        <p style="max-width: 500px; opacity: 0.9;">Leading 2,500+ attendees and 40 performances for the Indian Association of Sacramento’s 20th anniversary.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wp-block-post sticky">
+                <div class="sticky-card-inner">
+                    <img src="WhatsA.jpeg" alt="Community Relief">
+                    <div class="overlay-meta">
+                        <span class="section-label">COMMUNITY IMPACT</span>
+                        <h2 class="post-title-magazine">Humanitarian Milestones</h2>
+                        <p style="max-width: 500px; opacity: 0.9;">Supporting 150 flood-affected families in Tamil Nadu through Sacramento Tamil Mandrum initiatives.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wp-block-post sticky">
+                <div class="sticky-card-inner">
+                    <img src="WhatsApp Image 2026-02-24 at 2.00.59 PM.jpeg" alt="AI Technology">
+                    <div class="overlay-meta">
+                        <span class="section-label">INNOVATION</span>
+                        <h2 class="post-title-magazine">BRAIN 2025 AI Summit</h2>
+                        <p style="max-width: 500px; opacity: 0.9;">Building readiness for Agentic Intelligence and defining professional career pathways in technology.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wp-block-post sticky">
+                <div class="sticky-card-inner">
+                    <img src="WhatsApp Image 2026-02-24 .jpeg" alt="Sheriff Department IT">
+                    <div class="overlay-meta">
+                        <span class="section-label">PROFILES IN SERVICE</span>
+                        <h2 class="post-title-magazine">Bridging Safety & Software</h2>
+                        <p style="max-width: 500px; opacity: 0.9;">Managing high-impact applications for the Sacramento County Sheriff's Technical Operations Bureau.</p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <div class="ticker-wrap">
+        <div class="ticker-content">
+            Building Community • Technology • Excellence • IAS Sacramento • AI Readiness • Tamil Heritage • 
+        </div>
+    </div>
+
+    <footer class="wp-block-template-part">
+        <h2 class="header-logo" style="font-size: 3rem; margin-bottom: 20px;">JOSHUA'S STYLE</h2>
+        <p style="opacity: 0.4; letter-spacing: 2px;">© 2026 Profile of John Britto</p>
+        <div style="margin-top: 40px;">
+            <a href="https://www.linkedin.com/in/john-britto-11235a1b/" target="_blank" style="color: #fff; text-decoration: none; border: 1px solid #fff; padding: 10px 30px; letter-spacing: 2px;">LINKEDIN</a>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Zoom Parallax Logic
+        window.addEventListener('scroll', () => {
+            let offset = window.pageYOffset;
+            document.getElementById('heroBg').style.transform = `scale(${1 + offset / 5000}) translateY(${offset * 0.4}px)`;
+        });
+    </script>
+
+</body>
+</html>
